@@ -1,0 +1,45 @@
+# Analysis of Tasks for Unscrambling Computer Science Problems Project
+
+For each analysis, I am assuming that the reading of the CSV files is not meant to be included.
+
+I have made use of [this resource](https://wiki.python.org/moin/TimeComplexity) for determining some of the time complexities.
+
+## Task0
+
+For this task, we make eight get item operations. Each of these has a time complexity of O(1). Therefore, the time complexity of the whole task is O(n).
+
+## Task1
+
+For this task, we iterate through the calls and texts extracting the phone numbers, convert the result to a set, and, finally, get the length of the set. The time complexities of the are O(n), O(n), and O(1) respectively; therefore, the overall time complexity is O(n).
+
+## Task2
+
+For this task, we iterate through the calls list, O(n), and create a dictionary storing the total time each number has spent on calls (using the amortised worst case of O(n)).
+We then iterate through the tally dictionary, which will have a length of n in the worst case and, as such, will be O(n), and perform some comparisons and updating of variables which should be done in constant time.
+Overall, this task will have a worst case time complexity of O(n).
+
+## Task3
+
+In part A, we:
+1. iterate through the list of calls and extract out those made from Bangalore, performing constant time operations in each iteration - O(n).
+2. We then iterate through the above list and extract the area codes. In the worst case the filtered list will be the same size as n; therefore, this has O(n) as well.
+3. We convert the result to a set, also O(n).
+4. Then sort the set, which will be the same size as n in the worst case; therefore O(n log n).
+5. Loop over the resulting sorted list and print, a worst case of O(n).
+
+In part B, we:
+1. take the length of a computed value - O(1).
+2. Perform a similar procedure to number 1 in part A and take its length - O(n).
+3. And, Finally, perform and constant time calculation and a print, each O(1).
+
+Overall, the time complexity will be O(n log n).
+
+## Task4
+
+In this task, we:
+1. Iterate through the calls and texts lists twice each and convert the result of each iteration to a set, O(n) and O(n) respectively.
+2. Take the union of two sets twice - O(len(set1) + len(set2)). In the worst case, the sum of the lengths of the three sets must be smaller than 2n; therefore, this is O(n).
+3. Take the differrent of two sets - O(len(set1)). In the worst case, len(set1) <= n; therefore, O(n).
+4. Finally, loop through the result and print it - O(n) in the worst case.
+
+Overall, the time complexity for this task is O(n).
